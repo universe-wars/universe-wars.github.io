@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>universe wars</title>
+        <style>
+            #setumei{
+                float:left;
+                margin-left:20px;
+                margin-top:50px;
+                width:288px;
+            }
+            #main{
+                float:left;
+                width:900px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <link rel="stylesheet" href="Game.css">
+        
+        <div id="setumei">
+            <p align="center"><fontsize="4">～～説明～～</fontsize><p></p>
+            <p><fontsize="15">自機の動かし方</fontsize></p>
+            <ul>
+                <li><fontsize="2">＜を押している間、左に動く</fontsize></li>
+                <li><fontsize="2">＞を押している間、右に動く</fontsize></li>            
+                <li><fontsize="2">スペース を押すと攻撃</fontsize></li>
+            </ul>
+            <br>
+            <p><fontsize="8">勝利条件</fontsize></p>
+            <ul>
+                <li><fontsize="2">敵を全滅させる</fontsize></li>
+            </ul>
+            <br>
+            <p><fontsize="4">敗北条件</fontsize></p>
+            <ul>
+                <li><fontsize="2">残機がゼロになる</fontsize></li>
+                <li><fontsize="2">敵と接触する</fontsize></li>
+            </ul>
+        </div>
+
+        <div id="main">
+            <canvas id="myCanvas"></canvas>
+            <!--ファイル読み込み-->
+            <script type="text/javascript" src="Game2.js"></script>
+            
+        </div>
+
+    </body>
+</html>
