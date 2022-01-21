@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    
+</head>
+<body>
+    <div id="syouhai">
+        <link rel="stylesheet" href="end.css">
+        <script type="text/javascript" src="Game2.js"></script>
+        <div>
+            <p align="center"><font size="7"><font color="yellow">GAME CLEAR</font></fontsize></p>
+            <p align="center"><font size="5">SCORE :</font></p><p id= "SCORE"></p>
+        </div>
+        <div align="center" id="button" >    
+            <label style="display:block;">
+                <!--<button type="button" onclick="location.href='Game.html'" style="width:300px;height:60px">もう一度</button>-->
+                <button type="button" onclick="window.opener.close();window.open('./Game.html');window.close();" style="width:300px;height:60px">もう一度</button>
+            </label>
+            <label style="display:block;">
+                <button type="button" onclick="window.opener.close();window.open('./start.html');window.close();" style="width:300px;height:60px">戻る</button>
+            </label>
+        </div>
+    </div>
+</body>
+</html>
