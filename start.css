@@ -1,0 +1,78 @@
+@font-face {
+    font-family:'PixelMplus10' ;
+    src: url(../PixelMplus-20130602/PixelMplus10-Regular.ttf);
+}
+
+canvas {
+    background-color: black;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:600px;
+    font-family: 'PixelMplus10';
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: 'PixelMplus10';
+    color:white;
+    background-image:url("宇宙-1.jpg");
+    background-size: cover;
+    height : 100%;
+}
+
+#start{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start; 
+    flex-wrap : wrap;
+}
+#setumei{
+    padding-top:57px;
+    padding-left:20px;
+    padding-right: 20px;
+    /*border: solid 1px red;*/
+    flex-grow         : 1;
+}
+#main{
+    width:50%;
+    flex-grow         : 2;
+    /*border: solid 1px red;*/
+}
+#ranking{
+    /*border: solid 1px red;*/
+    padding-top:50px;
+    padding-left: 80px;
+    padding-right: 30px;
+    padding-bottom:110px;   
+    flex-grow         : 1;
+}
+
+#other{
+    display:flex;
+    flex-direction: column;
+}
+#button{
+    /*border: solid 1px red;*/
+}
+#input{
+    /*border: solid 1px red;*/
+}
+
+button{
+    background-color: rgb(0, 0, 0);
+    font-family: 'PixelMplus10';
+    color:white;
+    margin-top:30px;
+    margin-right:20px;
+    margin-left:20px;
+}
+
+input{
+    background-color: rgb(0, 0, 0);
+    font-family: 'PixelMplus10';
+    color:white;
+    margin-top:50px;
+}
