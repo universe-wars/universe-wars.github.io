@@ -3,84 +3,65 @@
     <head>
         <meta charset="utf-8"/>
         <title>universe wars</title>
-        <style>
-            #setumei{
-                float:left;
-                padding-left:20px;
-                padding-top:57px;
-                width:30%;
-                
-                
-            }
-            #main{
-                float:left;
-                width:40%;
-                
-            }
-            #ranking{
-                float:left;
-                padding-top:50px;
-                padding-bottom:110px;
-                padding-right:54px;
-                padding-left:100px;
-                
-            }            
-        </style>
     </head>
     <body>  
-        <link rel="stylesheet" href="Game.css">
-        <div id="setumei">
-            <p align="center"><fontsize="4">～～説明～～</fontsize><p></p>
-            <p><fontsize="15">自機の動かし方</fontsize></p>
-            <ul>
-                <li><fontsize="2">＜を押している間、左に動く</fontsize></li>
-                <li><fontsize="2">＞を押している間、右に動く</fontsize></li>            
-                <li><fontsize="2">スペース を押すと攻撃</fontsize></li>
-            </ul>
-            <br>
-            <p><fontsize="8">勝利条件</fontsize></p>
-            <ul>
-                <li><fontsize="2">敵を全滅させる</fontsize></li>
-            </ul>
-            <br>
-            <p><fontsize="4">敗北条件</fontsize></p>
-            <ul>
-                <li><fontsize="2">残機がゼロになる</fontsize></li>
-                <li><fontsize="2">敵と接触する</fontsize></li>
-            </ul>
-        </div>
-        
-        <div id="main">
-            <canvas id="myCanvas2"></canvas>
-            <!--ファイル読み込み-->
-            <script type="text/javascript" src="start.js"></script>
-        </div>
-
-        <div id="ranking">
-            <table border="1px">
-                <caption>ランキング</caption>
+        <link rel="stylesheet" href="start.css">
+        <div id = "start">
+            <div id="setumei">
+                <p align="center"><fontsize="4">～～説明～～</fontsize></p>
+                <p><fontsize="15">自機の動かし方</fontsize></p>
+                <ul>
+                    <li><fontsize="2">＜を押している間、左に動く</fontsize></li>
+                    <li><fontsize="2">＞を押している間、右に動く</fontsize></li>            
+                    <li><fontsize="2">スペース を押すと攻撃</fontsize></li>
+                </ul>
                 <br>
-                <tr><td width="80">1</td><td width="80">--</td></tr>
-                <tr><td>2</td><td>--</td></tr>
-                <tr><td>3</td><td>--</td></tr>
-                <tr><td>4</td><td>--</td></tr>
-                <tr><td>5</td><td>--</td></tr>
-                <tr><td>6</td><td>--</td></tr>
-                <tr><td>7</td><td>--</td></tr>
-                <tr><td>8</td><td>--</td></tr>
-                <tr><td>8</td><td>--</td></tr>
-                <tr><td>10</td><td>--</td></tr>
-            </table>
-        </div>
-        
-        <div align="center" >
-            <input name="name" type="text" style="width:200px;height:40px">
-        </div>
+                <p><fontsize="8">勝利条件</fontsize></p>
+                <ul>
+                    <li><fontsize="2">敵を全滅させる</fontsize></li>
+                </ul>
+                <br>
+                <p><fontsize="4">敗北条件</fontsize></p>
+                <ul>
+                    <li><fontsize="2">残機がゼロになる</fontsize></li>
+                    <li><fontsize="2">敵と接触する</fontsize></li>
+                </ul>
+            </div>
+            
+            <div id="main">
+                <canvas id="myCanvas2"></canvas>
+                <!--ファイル読み込み-->
+                <script type="text/javascript" src="start.js"></script>
+            </div>
 
-        <div align="center" id="button" >
-            <button type="button" onclick="location.href='Game.html'" style="width:150px;height:60px">Start</button>
-            <!--<button type="button" onclick="location.href='Game.html'" style="width:150px;height:60px">nomal</button>
-            <button type="button" onclick="location.href='Game.html'" style="width:150px;height:60px">herd</button>-->
+            <div id="ranking">
+                <table border="1px">
+                    <caption align="center">ランキング</caption>
+                    <br>
+                    <tr><td width="40" height="20">1</td><td width="80">--</td><td width="50">--</td></tr>
+                    <tr><td height="20">2</td><td>--</td><td>--</td></tr>
+                    <tr><td height="20">3</td><td>--</td><td>--</td></tr>
+                    <tr><td height="20">4</td><td>--</td><td>--</td></tr>
+                    <tr><td height="20">5</td><td>--</td><td>--</td></tr>
+                    <tr><td height="20">6</td><td>--</td><td>--</td></tr>
+                    <tr><td height="20">7</td><td>--</td><td>--</td></tr>
+                    <tr><td height="20">8</td><td>--</td><td>--</td></tr>
+                    <tr><td height="20">8</td><td>--</td><td>--</td></tr>
+                    <tr><td height="20">10</td><td>--</td><td>--</td></tr>
+                </table>
+            </div>
+         
+            <div id="other">
+                <div align="center" id="input">
+                    <input name="name" type="text" style="width:200px;height:40px">
+                </div>
+
+                <div align="center" id="button" >
+                    <button type="button" onclick="location.href='Game.html'" style="width:150px;height:60px">Start</button>
+                    <!--<button type="button" onclick="location.href='Game.html'" style="width:150px;height:60px">nomal</button>
+                    <button type="button" onclick="location.href='Game.html'" style="width:150px;height:60px">herd</button>-->
+                </div>
+            </div>
         </div>
 
         
