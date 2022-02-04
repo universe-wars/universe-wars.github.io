@@ -7,10 +7,12 @@ body{
 }
 #syouhai{
     font-size :50px;
+    line-height: 60px;
     color:yellow;
 }
 #score{
     font-size :30px;
+    line-height: 30px;
 }
 #SCORE{
     font-size :30px;
