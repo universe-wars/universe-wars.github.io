@@ -5,6 +5,16 @@ body{
     font-family: 'PixelMplus10';
     color:white;   
 }
+#syouhai{
+    font-size :50px;
+    color:yellow;
+}
+#score{
+    font-size :30px;
+}
+#SCORE{
+    font-size :30px;
+}
 button{
     background-color: rgb(29, 29, 29);
     font-family: 'PixelMplus10';
