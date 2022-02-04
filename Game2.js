@@ -28,7 +28,7 @@ var tate_y = [0,70,140];
 var beam_enemy_x = 156;
 var beam_enemy_y = 130; // 敵ビームのx座標とy座標
 var myWindow; // ゲーム終了時用
-var hantei=1; // ゲーム終了時用
+//var hantei=1; // ゲーム終了時用
 var fX = 348+a; //自機の当たり判定用
 var fY = 720+a; //自機の当たり判定用
 let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=450,height=420,left=560,top=150`; // ゲーム終了時用
@@ -115,7 +115,7 @@ function draw2() {
             var eY = 130 + y + tate;
             if(beam == true){
                 if(enemy[i][k] == 1){
-                    if(Math.abs(eX - beam_x) <= 15 && Math.abs(eY - beam_y) <= 15 || Math.abs(eX - beam_x1) <= 15 && Math.abs(eY - beam_y) <= 15){
+                    if(Math.abs(eX - beam_x) <= 20 && Math.abs(eY - beam_y) <= 20 || Math.abs(eX - beam_x1) <= 20 && Math.abs(eY - beam_y) <= 20){
                         enemy[i][k]=0;
                         score+=1;  
                         beam = false;                 
@@ -217,6 +217,19 @@ function enemy_attack1(){
     }
 }
 
+//自機当たり判定
+function hit(){
+    if(Math.abs(fX - beam_enemy_x) <= 25 && Math.abs(fY - beam_enemy_y) <= 25){
+        life -= 1;
+        attack_flag = 0;
+        a += 10;
+        draw1();
+        a -= 20;
+        draw1();
+        a += 10;
+    }
+}
+
 //残り時間表示
 function cntdown() {
     ctx.font = "25px PixelMplus10";
@@ -244,28 +257,14 @@ function zanki() {
 
 //ゲーム終了時
 function end(){
-    if(hantei!=0){
-        myWindow = window.open("./end.html","myWindow",params);
-    }
+    //docment.getElementById("syouhai").innerHTML = "GAME OVER";
+    myWindow = window.open("./end.html","myWindow",params);
 }
 
 function main() {
     ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
 
-    if(Math.abs(fX - beam_enemy_x) <= 25 && Math.abs(fY - beam_enemy_y) <= 25){
-        life -= 1;
-        attack_flag = 0;
-        a += 10;
-        draw1();
-        a -= 20;
-        draw1();
-        a += 10;
-        if(life <= 0){
-
-            clearInterval(interval); // ゲーム終了（画面停止）
-            end();
-        }
-    }
+    hit();
     draw1();
 
     if(flagtate == 1){
@@ -299,6 +298,14 @@ function main() {
     enemy_attack();
     enemy_attack1();
     
+    if(life <= 0){
+        clearInterval(interval); // ゲーム終了（画面停止）
+        end();
+    }
+    if(score == 18){
+        clearInterval(interval); // ゲーム終了（画面停止）
+        end();
+    }
     if (time > byou) { // 規定の秒数を超えたら
         clearInterval(interval); // ゲーム終了（画面停止）
         end();
