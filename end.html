@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    
-</head>
-<body>
-    <div>
-        <link rel="stylesheet" href="end.css">
-        <script type="text/javascript" src="Game2.js"></script>
-        <div id="a">
-           <p id="syouhai" align="center">GAME OVER</p>
-           <p id="score" align="center">SCORE :</p><p id= "SCORE"></p>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div>
+            <link rel="stylesheet" href="end.css">
+
+            <script type="text/javascript" >
+                var data = localStorage.getItem('score');
+                /*document.write(data);*/
+                /*document.getElementById("SCORE").innerHTML = data;*/
+            </script>
+
+            <div id="a">
+                <p id="syouhai" align="center">GAME CLEAR</p>
+                <div id="s">
+                    <p id="score" align="center">SCORE : <script> document.write(data);</script></p>
+                </div>
+            </div>
+
+            <div align="center" id="button" >    
+                <label style="display:block;">
+                    <!--<button type="button" onclick="location.href='Game.html'" style="width:300px;height:60px">もう一度</button>-->
+                    <button type="button" onclick="window.opener.close();window.open('./Game.html');window.close();" style="width:300px;height:60px">もう一度</button>
+                </label>
+                <label style="display:block;">
+                    <button type="button" onclick="window.opener.close();window.open('./start.html');window.close();" style="width:300px;height:60px">戻る</button>
+                </label>
+            </div>
+
         </div>
-        <div align="center" id="button" >    
-            <label style="display:block;">
-                <!--<button type="button" onclick="location.href='Game.html'" style="width:300px;height:60px">もう一度</button>-->
-                <button type="button" onclick="window.opener.close();window.open('./Game.html');window.close();" style="width:300px;height:60px">もう一度</button>
-            </label>
-            <label style="display:block;">
-                <button type="button" onclick="window.opener.close();window.open('./index.html');window.close();" style="width:300px;height:60px">戻る</button>
-            </label>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
