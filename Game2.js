@@ -28,7 +28,7 @@ var tate_y = [0,70,140];
 var beam_enemy_x = 156;
 var beam_enemy_y = 130; // 敵ビームのx座標とy座標
 var myWindow; // ゲーム終了時用
-//var hantei=1; // ゲーム終了時用
+var hantei=1; // ゲーム終了時用
 var fX = 348+a; //自機の当たり判定用
 var fY = 720+a; //自機の当たり判定用
 let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=450,height=420,left=560,top=150`; // ゲーム終了時用
@@ -257,8 +257,13 @@ function zanki() {
 
 //ゲーム終了時
 function end(){
-    //docment.getElementById("syouhai").innerHTML = "GAME OVER";
-    myWindow = window.open("./end.html","myWindow",params);
+    localStorage.setItem('score',score);
+    if(hantei == 1){
+        myWindow = window.open("./end.html","myWindow",params);
+    }
+    else{
+        myWindow = window.open("./end-lose.html","myWindow",params);
+    }
 }
 
 function main() {
@@ -300,14 +305,17 @@ function main() {
     
     if(life <= 0){
         clearInterval(interval); // ゲーム終了（画面停止）
+        hantei = 0;
         end();
     }
     if(score == 18){
         clearInterval(interval); // ゲーム終了（画面停止）
+        score += byou;
         end();
     }
     if (time > byou) { // 規定の秒数を超えたら
         clearInterval(interval); // ゲーム終了（画面停止）
+        hantei = 0;
         end();
     }
 }
