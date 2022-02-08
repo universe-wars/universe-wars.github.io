@@ -4,9 +4,12 @@ body{
     border:solid 3px;
     font-family: 'PixelMplus10';
     color:white;   
+
+    
 }
 #a{
-   line-height : 1;
+    line-height: 1;
+}
 #syouhai{
     font-size :55px;
     color:yellow;
