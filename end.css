@@ -1,3 +1,7 @@
+@font-face {
+    font-family:'PixelMplus10' ;
+    src: url(../PixelMplus-20130602/PixelMplus10-Regular.ttf);
+}
 body{
     background-color: rgb(0, 0, 0);
     border:solid 3px;
