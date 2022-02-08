@@ -310,7 +310,7 @@ function main() {
     }
     if(score == 18){
         clearInterval(interval); // ゲーム終了（画面停止）
-        score += byou;
+        score += Math.floor(byou - time);
         end();
     }
     if (time > byou) { // 規定の秒数を超えたら
